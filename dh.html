@@ -1,0 +1,331 @@
+<?php
+require '../inc/config.php';
+
+$gallery = $conn->query("SELECT * FROM gallery ORDER BY created_at DESC LIMIT 12");
+$news    = $conn->query("SELECT * FROM news ORDER BY created_at DESC LIMIT 6");
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Awale Karate Academy – Discipline • Strength • Confidence</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="site-wrapper">
+<div class="about-card animate">
+
+<header class="header">
+  <nav class="nav">
+    <div class="brand">
+      <div class="brand-mark">AK</div>
+      <div class="brand-text">Awale Karate Academy</div>
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#classes">Classes</a>
+      <a href="#timetable">Schedule</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#news">Updates</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="btn-nav">Book Free Trial</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-overlay">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-kicker">Discipline • Strength • Confidence</div>
+        <h1 class="hero-title">
+          Professional <span class="hero-highlight">Karate Training</span><br>for Kids & Adults
+        </h1>
+        <p class="hero-sub">
+          Safe, structured classes focused on discipline, fitness and real self-defense – from complete beginners to tournament-level athletes.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Join Now</a>
+          <a href="#timetable" class="btn-secondary">View Class Schedule</a>
+        </div>
+        <div class="hero-meta">
+          <span>Black belt instructor</span>
+          <span>Kids, Teens & Adults</span>
+          <span>Free trial class available</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3 style="font-size:0.95rem; margin-bottom:0.5rem;">Quick Info</h3>
+        <p style="font-size:0.85rem; color:#d4d4d8; margin-bottom:0.4rem;">Location: Your City, Maharashtra</p>
+        <p style="font-size:0.85rem; color:#d4d4d8; margin-bottom:0.4rem;">Weekly Classes: Mon to Sat</p>
+        <p style="font-size:0.85rem; color:#d4d4d8;">Call / WhatsApp: +91-XXXXXXXXXX</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="section-header">
+    <div>
+      <div class="section-kicker">About Us</div>
+      <h2 class="section-title">Awale Karate Academy</h2>
+    </div>
+    <p class="section-sub">
+      A modern dojo combining traditional discipline with professional coaching for today’s kids, teens and adults.
+    </p>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-card">
+      <p>
+        Awale Karate Academy provides structured training focused on discipline, confidence and real-world self-defense for all age groups.
+      </p>
+      <p>
+        Sessions are designed to improve focus, fitness and mental toughness while keeping classes safe and engaging for beginners.
+      </p>
+      <div class="chips">
+        <span class="chip">Certified Black Belt Instructor</span>
+        <span class="chip">Kids & Adult Batches</span>
+        <span class="chip">Safe Training Environment</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <p style="font-size:0.9rem; margin-bottom:0.6rem;">Why parents choose us:</p>
+      <ul style="font-size:0.85rem; color:var(--text-muted); padding-left:1rem;">
+        <li>Age-appropriate training groups</li>
+        <li>Focus on discipline and respect</li>
+        <li>Regular belt tests and feedback</li>
+        <li>Tournament preparation for interested students</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="classes" class="section">
+  <div class="section-header">
+    <div>
+      <div class="section-kicker">Programs</div>
+      <h2 class="section-title">Classes & Batches</h2>
+    </div>
+    <p class="section-sub">
+      Structured programs for each age and goal – from kids learning basics to athletes preparing for competition.
+    </p>
+  </div>
+
+  <div class="cards-3">
+    <div class="card">
+      <h3>Kids Karate</h3>
+      <small>Ages 6–12</small>
+      <p>Fun, disciplined classes that build focus, respect and basic self-defense in a safe environment.</p>
+      <div class="badge-row">
+        <span class="badge">Beginner</span>
+        <span class="badge">Basics</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Teens & Adults</h3>
+      <small>13+ years</small>
+      <p>Fitness, technique and real-world self-defense training for teens and adults of all levels.</p>
+      <div class="badge-row">
+        <span class="badge">Beginner–Advanced</span>
+        <span class="badge">Self-defense</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Self-Defense & Fitness</h3>
+      <small>Short courses</small>
+      <p>Focused self-defense drills and fitness sessions for those who want practical skills and conditioning.</p>
+      <div class="badge-row">
+        <span class="badge">Workshops</span>
+        <span class="badge">Corporate / Groups</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="timetable" class="section">
+  <div class="section-header">
+    <div>
+      <div class="section-kicker">Schedule</div>
+      <h2 class="section-title">Weekly Timetable</h2>
+    </div>
+    <p class="section-sub">
+      Clear, easy-to-follow schedule so parents and students always know batch time and training days.
+    </p>
+  </div>
+
+  <table class="timetable">
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Kids (6–12)</th>
+        <th>Teens & Adults (13+)</th>
+        <th>Self-defense</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mon</td>
+        <td>5:00 – 6:00 pm</td>
+        <td>7:00 – 8:00 pm</td>
+        <td>–</td>
+      </tr>
+      <tr>
+        <td>Tue</td>
+        <td>–</td>
+        <td>7:00 – 8:00 pm</td>
+        <td>6:00 – 7:00 pm</td>
+      </tr>
+      <tr>
+        <td>Wed</td>
+        <td>5:00 – 6:00 pm</td>
+        <td>7:00 – 8:00 pm</td>
+        <td>–</td>
+      </tr>
+      <tr>
+        <td>Thu</td>
+        <td>–</td>
+        <td>7:00 – 8:00 pm</td>
+        <td>6:00 – 7:00 pm</td>
+      </tr>
+      <tr>
+        <td>Fri</td>
+        <td>5:00 – 6:00 pm</td>
+        <td>7:00 – 8:00 pm</td>
+        <td>–</td>
+      </tr>
+      <tr>
+        <td>Sat</td>
+        <td>Morning batch</td>
+        <td>Evening batch</td>
+        <td>Workshops</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="gallery" class="section">
+  <div class="section-header">
+    <div>
+      <div class="section-kicker">Gallery</div>
+      <h2 class="section-title">Training & Tournaments</h2>
+    </div>
+    <p class="section-sub">
+      Highlights from belt ceremonies, daily training and tournament achievements at the academy.
+    </p>
+  </div>
+
+  <div class="gallery-grid">
+    <?php while($g = $gallery->fetch_assoc()): ?>
+      <div class="gallery-item">
+        <?php if ($g['type'] === 'photo'): ?>
+          <img src="uploads/gallery/<?= htmlspecialchars($g['file_name']) ?>" alt="<?= htmlspecialchars($g['title']) ?>">
+          <div class="gallery-body">
+            <?php if ($g['title']): ?>
+              <div class="g-title"><?= htmlspecialchars($g['title']) ?></div>
+            <?php endif; ?>
+            <?php if ($g['category']): ?>
+              <div class="g-cat"><?= htmlspecialchars($g['category']) ?></div>
+            <?php endif; ?>
+          </div>
+        <?php else: ?>
+          <a href="<?= htmlspecialchars($g['video_url']) ?>" target="_blank">
+            <div class="video-thumb">
+              <span>▶</span>
+              <p><?= htmlspecialchars($g['title'] ?: 'Watch tournament video') ?></p>
+            </div>
+          </a>
+        <?php endif; ?>
+      </div>
+    <?php endwhile; ?>
+  </div>
+</section>
+
+<section id="news" class="section">
+  <div class="section-header">
+    <div>
+      <div class="section-kicker">Updates</div>
+      <h2 class="section-title">Latest News & Events</h2>
+    </div>
+    <p class="section-sub">
+      Recent belt tests, tournament results and new batch announcements updated regularly.
+    </p>
+  </div>
+
+  <div class="news-list">
+    <?php while($n = $news->fetch_assoc()): ?>
+      <article class="news-item">
+        <h3><?= htmlspecialchars($n['title']) ?></h3>
+        <?php if ($n['event_date']): ?>
+          <small><?= htmlspecialchars($n['event_date']) ?></small>
+        <?php endif; ?>
+        <p><?= nl2br(htmlspecialchars($n['short_text'])) ?></p>
+        <?php if ($n['image']): ?>
+          <img src="uploads/gallery/<?= htmlspecialchars($n['image']) ?>" alt="">
+        <?php endif; ?>
+      </article>
+    <?php endwhile; ?>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="section-header">
+    <div>
+      <div class="section-kicker">Contact</div>
+      <h2 class="section-title">Book Your Free Trial</h2>
+    </div>
+    <p class="section-sub">
+      Fill the form or send us a WhatsApp message and we will confirm your batch and timing.
+    </p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-card">
+      <form method="post" action="#">
+        <label>Student Name</label>
+        <input type="text" name="name" required>
+
+        <label>Age</label>
+        <input type="number" name="age" min="4" max="70">
+
+        <label>Class Type</label>
+        <select name="class_type">
+          <option value="Kids">Kids Karate (6–12)</option>
+          <option value="TeensAdults">Teens & Adults (13+)</option>
+          <option value="SelfDefense">Self-defense / Fitness</option>
+        </select>
+
+        <label>Preferred Timing</label>
+        <input type="text" name="timing" placeholder="Example: Mon–Wed 5–6 pm">
+
+        <label>Mobile Number</label>
+        <input type="text" name="phone" required>
+
+        <button type="submit" class="btn-primary full">Submit Enquiry</button>
+      </form>
+
+      <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20to%20book%20a%20Karate%20trial%20class" target="_blank" class="btn-secondary" style="margin-top:0.8rem; display:inline-block;">
+        Chat on WhatsApp
+      </a>
+    </div>
+    <div class="contact-card contact-details">
+      <p><strong>Address:</strong> Your full academy address here.</p>
+      <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
+      <p><strong>Timings:</strong> Mon–Sat, as per schedule above.</p>
+      <p style="margin-top:0.8rem;">Google Map embed yahan add kar sakte ho (iframe) for exact location.</p>
+      <p style="margin-top:0.8rem; font-size:0.85rem;">Admin login: <a href="admin/login.php">Staff / Admin Portal</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>© <?= date('Y') ?> Awale Karate Academy. All rights reserved.</span>
+    <span>Designed for professional, student-friendly experience.</span>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
